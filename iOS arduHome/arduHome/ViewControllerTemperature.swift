@@ -28,7 +28,7 @@ class ViewControllerTemperature: UIViewController, Actualizame {
     }
 
     @IBAction func sliderValueChanged(sender: UISlider) {
-        RestAPISingleton.shared.post(Metodo: "/api/climatizador/", postParams: ["nombre":"sala" as AnyObject, "temperaturaActual": temperaturaActual as AnyObject, "temperaturaObjetivo": sender.value as AnyObject, ])
+        RestAPISingleton.shared.post(Metodo: "api/climatizador", postParams: ["nombre":"sala" as AnyObject, "temperaturaObjetivo": sender.value as AnyObject, ])
         self.labelTemperaturaControl.text = String(describing: Int(sender.value)) + "º";
 
     }

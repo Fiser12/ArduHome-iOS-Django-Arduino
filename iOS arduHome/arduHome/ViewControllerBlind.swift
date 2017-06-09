@@ -21,7 +21,7 @@ class ViewControllerBlind: UIViewController, Actualizame {
         RestAPISingleton.shared.get(Metodo: "api/persiana/persiana1", Actualizame: self, id: "0")
     }
     @IBAction func valueChanged(_ sender: UISlider) {
-        RestAPISingleton.shared.post(Metodo: "/api/persiana/", postParams: ["nombre":"persiana1" as AnyObject, "porcentajeAbierta": sender.value as AnyObject])
+        RestAPISingleton.shared.post(Metodo: "api/persiana", postParams: ["nombre":"persiana1" as AnyObject, "porcentajeAbierta": sender.value as AnyObject])
     }
     
     func actualizar(json: [String : Any]?, id:String) {

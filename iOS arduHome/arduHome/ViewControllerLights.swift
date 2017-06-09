@@ -47,13 +47,13 @@ class ViewControllerLights: UIViewController, Actualizame {
         }
     }
     @IBAction func lucesSalonChange(_ sender: UISwitch) {
-        RestAPISingleton.shared.post(Metodo: "/api/bombilla/", postParams: ["nombre":"salon" as AnyObject, "encendida": sender.isOn as AnyObject])
+        RestAPISingleton.shared.post(Metodo: "api/bombilla", postParams: ["nombre":"salon" as AnyObject, "encendida": sender.isOn as AnyObject])
     }
     @IBAction func lucesCocinaChange(_ sender: UISwitch) {
-        RestAPISingleton.shared.post(Metodo: "/api/bombilla/", postParams: ["nombre":"cocina" as AnyObject, "encendida": sender.isOn as AnyObject])
+        RestAPISingleton.shared.post(Metodo: "api/bombilla", postParams: ["nombre":"cocina" as AnyObject, "encendida": sender.isOn as AnyObject])
     }
     @IBAction func lucesHabitaciónChange(_ sender: UISwitch) {
-        RestAPISingleton.shared.post(Metodo: "/api/bombilla/", postParams: ["nombre":"habitacion" as AnyObject, "encendida": sender.isOn as AnyObject])
+        RestAPISingleton.shared.post(Metodo: "api/bombilla", postParams: ["nombre":"habitacion" as AnyObject, "encendida": sender.isOn as AnyObject])
     }
     override func viewWillAppear(_ animated: Bool) {
         actualizarLuces()
